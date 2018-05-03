@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>模拟双向数据绑定</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="mes">
+    {{mes}}
+    <input type="text" v-model="a.a">
+    <ul>
+        <li v-model="limes"></li>
+    </ul>
+</div>
+<script type="text/javascript" src="watcher.js"></script>
+<script type="text/javascript" src="obServer.js"></script>
+<script type="text/javascript" src="compile.js"></script>
+<script type="text/javascript" src="mvvm.js"></script>
+<script type="text/javascript">
+let vm = new MVVM({
+    el:'#app',
+    data:{
+        mes:'hell word',
+        limes: '我是li',
+        a:{
+            a:'wew'
+        }
+    }
+});
+</script>
+</body>
+</html>
